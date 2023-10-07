@@ -539,7 +539,7 @@ const HomeContent = () => {
 							{/* card 1 */}
 							<div className="col-lg-2 mb-3">
 								<label htmlFor="">Icon</label>
-								<IconPicker
+								{/* <IconPicker
 									value={
 										state.chose_card_one_icon
 											? state?.chose_card_one_icon
@@ -554,7 +554,7 @@ const HomeContent = () => {
 											},
 										})
 									}
-								/>
+								/> */}
 							</div>
 							<div className="col-lg-5">
 								<div className="form-group mb-4 position-relative">
@@ -584,7 +584,7 @@ const HomeContent = () => {
 							{/* card 2 */}
 							<div className="col-lg-2 mb-3">
 								<label htmlFor="">Icon</label>
-								<IconPicker
+								{/* <IconPicker
 									value={
 										state.chose_card_two_icon
 											? state?.chose_card_two_icon
@@ -599,7 +599,7 @@ const HomeContent = () => {
 											},
 										})
 									}
-								/>
+								/> */}
 							</div>
 							<div className="col-lg-5">
 								<div className="form-group mb-4 position-relative">
@@ -629,7 +629,7 @@ const HomeContent = () => {
 							{/* card 3 */}
 							<div className="col-lg-2 mb-3">
 								<label htmlFor="">Icon</label>
-								<IconPicker
+								{/* <IconPicker
 									value={
 										state.chose_card_three_icon
 											? state?.chose_card_three_icon
@@ -644,7 +644,7 @@ const HomeContent = () => {
 											},
 										})
 									}
-								/>
+								/> */}
 							</div>
 							<div className="col-lg-5">
 								<div className="form-group mb-4 position-relative">
@@ -674,7 +674,7 @@ const HomeContent = () => {
 							{/* card 4 */}
 							<div className="col-lg-2 mb-3">
 								<label htmlFor="">Icon</label>
-								<IconPicker
+								{/* <IconPicker
 									value={
 										state.chose_card_four_icon
 											? state?.chose_card_four_icon
@@ -689,7 +689,7 @@ const HomeContent = () => {
 											},
 										})
 									}
-								/>
+								/> */}
 							</div>
 							<div className="col-lg-5">
 								<div className="form-group mb-4 position-relative">

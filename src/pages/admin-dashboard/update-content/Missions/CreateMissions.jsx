@@ -110,7 +110,7 @@ const CreateMissions = () => {
 
 							<div className="col-lg-12 mb-3">
 								<label htmlFor="">Icon</label>
-								<IconPicker
+								{/* <IconPicker
 									value={state.data.icon_class}
 									onChange={(e) =>
 										dispatch({
@@ -121,7 +121,7 @@ const CreateMissions = () => {
 											},
 										})
 									}
-								/>
+								/> */}
 							</div>
 						</div>
 					</div>

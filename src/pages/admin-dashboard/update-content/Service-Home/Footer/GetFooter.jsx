@@ -92,11 +92,11 @@ const GetFooter = () => {
 														<tr key={data?.id}>
 															<td>{i + 1}</td>
 															<td>
-																<IconPickerItem
+																{/* <IconPickerItem
 																	icon={data?.icon_class}
 																	size={24}
 																	color="#000"
-																/>
+																/> */}
 															</td>
 
 															<td>{data?.media_link}</td>

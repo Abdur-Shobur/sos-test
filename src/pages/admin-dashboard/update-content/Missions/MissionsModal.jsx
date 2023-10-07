@@ -132,7 +132,7 @@ const MissionsModal = ({ missionId, missionFetch }) => {
 
 										<div className="col-lg-12 mb-3">
 											<label htmlFor="">Icon</label>
-											<IconPicker
+											{/* <IconPicker
 												value={state?.icon_class}
 												onChange={(e) =>
 													dispatch({
@@ -143,7 +143,7 @@ const MissionsModal = ({ missionId, missionFetch }) => {
 														},
 													})
 												}
-											/>
+											/> */}
 										</div>
 									</div>
 								</div>

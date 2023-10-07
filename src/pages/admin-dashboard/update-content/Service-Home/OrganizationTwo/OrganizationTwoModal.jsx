@@ -135,7 +135,7 @@ const OrganizationTwoModal = ({ clickId, organizationTwoRefetch }) => {
 
 										<div className="col-lg-12 mb-3">
 											<label htmlFor="">Icon</label>
-											<IconPicker
+											{/* <IconPicker
 												value={state.icon}
 												onChange={(e) =>
 													dispatch({
@@ -146,7 +146,7 @@ const OrganizationTwoModal = ({ clickId, organizationTwoRefetch }) => {
 														},
 													})
 												}
-											/>
+											/> */}
 										</div>
 
 										<div className="col-lg-12">
