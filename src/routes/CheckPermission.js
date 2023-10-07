@@ -10,19 +10,19 @@ const CheckPermission = ({ roleID, children }) => {
 	if (roleID === role) {
 		return children;
 	}
-	// if (role) {
-	// 	if (role === '1') {
-	// 		return <Navigate to={`/`} replace={true} />;
-	// 	} else if (role === '2') {
-	// 		return <Navigate to={`/vendors-dashboard`} replace={true} />;
-	// 	} else if (role === '3') {
-	// 		return <Navigate to={`/affiliates-dashboard`} replace={true} />;
-	// 	} else {
-	// 		return <Navigate to={`/user-dashboard`} replace={true} />;
-	// 	}
-	// }
+	if (role) {
+		if (role === '1') {
+			return <Navigate to={`/`} replace={true} />;
+		} else if (role === '2') {
+			return <Navigate to={`/vendors-dashboard`} replace={true} />;
+		} else if (role === '3') {
+			return <Navigate to={`/affiliates-dashboard`} replace={true} />;
+		} else {
+			return <Navigate to={`/user-dashboard`} replace={true} />;
+		}
+	}
 
-	if (TEST === 'ok') {
+	if (TEST !== 'ok') {
 		return children;
 	}
 	// (window.location.href = `${LIVE_LINK}/login`);
