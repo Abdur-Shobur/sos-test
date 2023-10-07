@@ -1,7 +1,11 @@
 import React, { createContext, useEffect, useState } from 'react';
 import swal from 'sweetalert';
 import { http } from '../components/action/axiosInstance';
-import { getCookie, removeCookie } from '../components/action/actions';
+import {
+	getCookie,
+	removeCookie,
+	removeCookie2,
+} from '../components/action/actions';
 import { DOMAIN_URL, LIVE_LINK } from '../components/env';
 
 export const UseAuth = createContext();
@@ -18,7 +22,7 @@ function AuthContext({ children }) {
 		http.post(`/logout`).then((res) => {
 			if (res.data.status === 200) {
 				localStorage.clear();
-				removeCookie('user_info', DOMAIN_URL);
+				removeCookie2();
 				removeCookie('userInfo', DOMAIN_URL);
 				swal('Success', res.data.message, 'success');
 				setLoading(false);

@@ -2,6 +2,7 @@ import swal from 'sweetalert';
 import { saveAs } from 'file-saver';
 import { useState } from 'react';
 import preview from '../../assets/img/products/vender-upload-thumb-preview.jpg';
+import { DOMAIN_URL } from '../env';
 
 // count word
 // countWord(word,countNumber)
@@ -256,6 +257,13 @@ export function getCookie(name) {
 	}
 	return null;
 }
+
+export function removeCookie2() {
+	// Set the expiration date to a past date
+	document.cookie = `user_info=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${DOMAIN_URL};`;
+}
+
+// Example usage to remove the "user_info" cookie
 
 export function removeCookie(name, domain) {
 	const pastDate = new Date(0);
