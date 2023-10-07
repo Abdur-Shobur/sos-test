@@ -287,7 +287,8 @@ export function deleteCookie(cookieName) {
 
 			// Set the expiration date to a past date
 			document.cookie =
-				name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+				name +
+				'=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;domain=.bazar64.xyz';
 			return; // Exit the loop once the cookie is deleted
 		}
 	}
