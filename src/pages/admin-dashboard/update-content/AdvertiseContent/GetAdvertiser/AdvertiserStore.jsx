@@ -29,7 +29,6 @@ const AdvertiserStore = () => {
 
 	const [state, dispatch] = useReducer(reducer, initialState);
 
-	console.log(state);
 	const handleSubmitMember = async (e) => {
 		e.preventDefault();
 		setLoading(true);
@@ -43,25 +42,21 @@ const AdvertiserStore = () => {
 				fromData,
 				multipartConfig
 			);
-			console.log(data);
+
 			if (data.data.success === false) {
 				tost(data?.data?.[0]);
 				tost(data?.data.message);
 				setError(data?.data?.data?.data);
-				console.log(data?.data, 'dfas');
 			} else if (data.data.success === 'success') {
 				navigate('/admin/advertise-content');
 				tost(data?.data.message);
-				console.log(data?.data.message);
 			}
 			setLoading(false);
 		} catch (error) {
 			setLoading(false);
-			console.error(error);
-		}
+ 		}
 	};
-	console.log(error);
-
+ 
 	useEffect(() => {
 		Aos.init({ delay: 300, offset: 50, duration: 300 });
 	}, []);
@@ -713,7 +708,10 @@ const AdvertiserStore = () => {
 					</div>
 
 					<div className="modal-footer px-4">
-						<Link to={'/admin/advertise-content'} className="btn btn-secondary btn-pill">
+						<Link
+							to={'/admin/advertise-content'}
+							className="btn btn-secondary btn-pill"
+						>
 							Cancel
 						</Link>
 						<button

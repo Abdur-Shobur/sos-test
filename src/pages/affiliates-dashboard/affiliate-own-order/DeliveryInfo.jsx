@@ -7,30 +7,18 @@ import { downloadImage } from "../../../components/action/actions";
 import { FiDownload } from "react-icons/fi";
 
 const DeliveryInfo = ({ orderSingleData, refetch }) => {
-  // console.log(
-  //   "deliverysdfsdf3",
-  //   orderSingleData?.orderdelivery?.[orderSingleData?.orderdelivery?.length - 1]
-  //     .deliveryfiles?.[
-  //     orderSingleData?.orderdelivery?.[
-  //       orderSingleData?.orderdelivery?.length - 1
-  //     ].deliveryfiles.length - 1
-  //   ]?.id
-  // );
-  console.log(orderSingleData);
-
+ 
+ 
   const handleRevision = async (e) => {
-    console.log(e);
-    const data = await http.post("/service/order/status", e);
-    console.log("output status change", data);
-    if (data?.data?.data === "success") {
+     const data = await http.post("/service/order/status", e);
+     if (data?.data?.data === "success") {
       refetch();
       tost(data?.data?.message);
     } else if (data?.data?.message === "Validation errors") {
       tost(data?.data?.data?.order_delivery_id[0]);
     }
   };
-  console.log(orderSingleData);
-  return (
+   return (
     <div className={style.packageInfo}>
       <h3 className={style.heading}>Delivery Info</h3>
       {orderSingleData?.orderdelivery?.map((e, i) => (

@@ -39,14 +39,12 @@ export const options = {
 };
 
 export function SellsGraph({ chartData, chartIsLoading, is = 'revenue' }) {
-	// console.log(chartData, 'ch');
-	const [chart, setChart] = useState({
+ 	const [chart, setChart] = useState({
 		label: [],
 		order: [],
 		revenue: [],
 	});
-	// console.log(chart);
-	useEffect(() => {
+ 	useEffect(() => {
 		setChart({
 			label: chartData?.daily.label,
 			order: chartData?.daily.order,

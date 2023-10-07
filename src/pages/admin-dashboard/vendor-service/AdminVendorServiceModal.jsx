@@ -51,8 +51,7 @@ const AdminVendorServiceModal = ({ clickId, refetch }) => {
 
     try {
       const data = await http.put(`/admin/vendor-services/${clickId}`, state);
-      console.log(data, "fldkfksdf");
-      if (data.data.data !== "success") {
+       if (data.data.data !== "success") {
         tost(data?.data?.errors.name[0]);
       } else if (data.data.data === "success") {
         refetch();
@@ -63,8 +62,7 @@ const AdminVendorServiceModal = ({ clickId, refetch }) => {
       setLoading(false);
     } catch (error) {
       setLoading(false);
-      console.error(error);
-    }
+     }
   };
 
   return (

@@ -6,7 +6,7 @@ import { GetAdminFooterData } from '../../../../../api/admin/apiAdmin';
 import { http } from '../../../../../components/action/axiosInstance';
 import { toast } from 'react-toastify';
 import { DeletePopUP } from '../../../../../components/action/DeletePopUP';
-// import { IconPickerItem } from 'react-fa-icon-picker';
+// import { IconPickerItem } from "react-fa-icon-picker";
 import FooterModal from './FooterModal';
 import TableBodyLoading from '../../../../../components/loader/TableBodyLoading';
 import { NoDataFound } from '../../../../../components/table/TableComponents';
@@ -93,10 +93,10 @@ const GetFooter = () => {
 															<td>{i + 1}</td>
 															<td>
 																{/* <IconPickerItem
-																	icon={data?.icon_class}
-																	size={24}
-																	color="#000"
-																/> */}
+                                  icon={data?.icon_class}
+                                  size={24}
+                                  color="#000"
+                                /> */}
 															</td>
 
 															<td>{data?.media_link}</td>

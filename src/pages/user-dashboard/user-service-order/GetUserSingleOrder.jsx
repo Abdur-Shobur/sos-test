@@ -13,8 +13,7 @@ import Aos from "aos";
 const GetUserSingleOrder = () => {
   const id = useParams().id;
   const { orderSingleData, isLoading, refetch } = GetVendorSingleOrder(id);
-  // console.log("order 43434", orderSingleData);
-
+ 
   // loading animation
   useEffect(() => {
     Aos.init({ delay: 300, offset: 50, duration: 300 });

@@ -1,5 +1,4 @@
 import React from 'react';
-import style from '../../../../assets/css/style.module.css';
 import { statusChangeAmount } from './statusChageAmount';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';

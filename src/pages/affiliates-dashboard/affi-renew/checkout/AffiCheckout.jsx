@@ -46,8 +46,7 @@ const AffiCheckout = () => {
       }
     } catch (error) {
       setLoading(false);
-      console.error(error);
-    }
+     }
     setLoading(false);
   };
 

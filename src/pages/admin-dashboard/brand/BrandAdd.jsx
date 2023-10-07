@@ -21,7 +21,7 @@ function BrandAdd() {
 	const [state, dispatch] = useReducer(reducer, initialState);
 	const [loading, setLoading] = useState(false);
 	const navigate = useNavigate();
-	 
+
 	const brand_add = async (e) => {
 		setLoading(true);
 		e.preventDefault();
@@ -40,7 +40,6 @@ function BrandAdd() {
 			setLoading(false);
 		} catch (error) {
 			setLoading(false);
-			console.error(error);
 		}
 	};
 

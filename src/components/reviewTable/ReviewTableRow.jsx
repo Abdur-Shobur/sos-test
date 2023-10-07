@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import p1 from '../../assets/img/products/p1.jpg';
 import u1 from '../../assets/img/user/u1.jpg';

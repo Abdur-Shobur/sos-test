@@ -1,6 +1,5 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import ProductView from '../../../components/product-view/ProductView';
 import { ViewOrderProduct } from '../../../api/admin/orderAPI';
 import OrderView from './order-view/OrderView';
 

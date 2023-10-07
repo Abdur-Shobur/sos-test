@@ -7,7 +7,6 @@ import {
 } from '../../../components/action/axiosInstance';
 import BrandFile from '../../../components/formComponent/BrandFile';
 import InputMain from '../../../components/formComponent/InputMain';
-import SelectMain from '../../../components/formComponent/SelectMain';
 import preview from '../../../assets/img/products/vender-upload-thumb-preview.jpg';
 
 import { reducer } from './action/add/addReducer';
@@ -58,7 +57,6 @@ function VendorBrandAdd() {
 			setLoading(false);
 		} catch (error) {
 			setLoading(false);
-			console.error(error);
 		}
 	};
 	return (

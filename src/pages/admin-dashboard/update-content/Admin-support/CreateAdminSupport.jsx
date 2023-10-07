@@ -1,18 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import Aos from 'aos';
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-import { useDebounce } from '../../../../components/action/useDebounce';
 import CommonBreadCrumbs from '../../../../components/breadcrumbs/CommonBreadCrumbs';
 import { Link } from 'react-router-dom';
 
 function CreateAdminSupport() {
-	const [page, setPage] = useState(null);
-	const [search, setSearch] = useState(' ');
-	const { searchHandler } = useDebounce(setSearch, setPage);
-	// const { vendors, isLoading, refetch } = VendorsAll(page, search);
-
 	// loading animation
 	useEffect(() => {
 		Aos.init({ delay: 300, offset: 50, duration: 300 });
@@ -25,7 +19,6 @@ function CreateAdminSupport() {
 			</Helmet>
 			<div className="content">
 				<CommonBreadCrumbs
-					searchHandler={searchHandler}
 					heading="Create Support"
 					home=""
 					link={{ name: 'All Support', path: '/admin/all-support' }}

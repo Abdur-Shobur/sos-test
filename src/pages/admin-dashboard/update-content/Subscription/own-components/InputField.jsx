@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const InputField = ({ state, dispatch, data, i }) => {
 	return (

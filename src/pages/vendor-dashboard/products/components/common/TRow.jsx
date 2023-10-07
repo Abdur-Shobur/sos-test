@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { http } from '../../../../../components/action/axiosInstance';
 import { DeletePopUP } from '../../../../../components/action/DeletePopUP';
-import style from '../../../../../assets/css/style.module.css';
 import { countWord, time } from '../../../../../components/action/actions';
 import { TableImage } from '../../../../../components/table/TableComponents';
 import { VENDOR_PRODUCT_VIEW } from '../../../../../components/action/path';

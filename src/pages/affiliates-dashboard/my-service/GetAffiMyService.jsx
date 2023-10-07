@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-import { useDebounce } from "../../../components/action/useDebounce";
-import Aos from "aos";
+ import Aos from "aos";
 import TableBodyLoading from "../../../components/loader/TableBodyLoading";
 import Pagination from "../../../components/breadcrumbs/Pagination";
 import CommonBreadCrumbs from "../../../components/breadcrumbs/CommonBreadCrumbs";
@@ -19,14 +18,12 @@ const GetAffiMyService = () => {
   const [page, setPage] = useState(null);
   const { serviceAllData, isLoading, refetch } = GetAffiAllService(page);
 
-  console.log("order", serviceAllData?.data[0]);
-
+ 
   // order progress
   const handleProgress = async (e) => {
-    console.log(e);
+    
     const data = await http.post("/service/status", e);
-    console.log("data", data);
-    if (data?.data?.data === "success") {
+     if (data?.data?.data === "success") {
       tost(data?.data?.message);
       refetch();
     } else if (data?.data?.message === "Validation errors") {

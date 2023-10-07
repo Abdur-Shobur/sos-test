@@ -9,7 +9,6 @@ import {
 import { reducer } from '../../../components/action/reducerAction';
 import BrandFile from '../../../components/formComponent/BrandFile';
 import Input from '../../../components/formComponent/InputEdit';
-import Select from '../../../components/formComponent/SelectEdit';
 import preview from '../../../assets/img/products/vender-upload-thumb-preview.jpg';
 
 function VendorBrandEdit() {
@@ -50,7 +49,6 @@ function VendorBrandEdit() {
 			setLoading(false);
 		} catch (error) {
 			setLoading(false);
-			console.error(error);
 		}
 	};
 	return (

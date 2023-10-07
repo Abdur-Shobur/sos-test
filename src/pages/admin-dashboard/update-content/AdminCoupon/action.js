@@ -101,7 +101,6 @@ export const reducer = (state = initialState, action) => {
 
 			// Extract year, month, day, hour, minute, and second components
 			const year = inputDate.getUTCFullYear();
-			console.log(inputDate.getUTCHours());
 			const month = String(inputDate.getUTCMonth() + 1).padStart(2, '0'); // Month is 0-based, so add 1 and pad with leading zeros
 			const day = String(inputDate.getUTCDate() + 1).padStart(2, '0');
 			const hour = String(inputDate.getUTCHours()).padStart(2, '0');

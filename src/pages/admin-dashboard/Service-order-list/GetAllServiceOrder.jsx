@@ -14,6 +14,7 @@ import tost from "../../../components/action/tost";
 const GetAllServiceOrder = () => {
   const [page, setPage] = useState(null);
   const [search, setSearch] = useState(" ");
+  // eslint-disable-next-line no-unused-vars
   const { searchHandler } = useDebounce(setSearch, setPage);
   const { orderServiceData, isLoading, refetch } = GetAdminServiceOrder(
     page,

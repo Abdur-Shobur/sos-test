@@ -10,6 +10,7 @@ import SupportViewTable from '../../../components/support-create/SupportViewTabl
 
 function AllSupport() {
 	const [page, setPage] = useState(null);
+	// eslint-disable-next-line no-unused-vars
 	const [search, setSearch] = useState(' ');
 	// const { searchHandler } = useDebounce(setSearch, setPage);
 	const { supportData, refetch, isLoading } = GetAllSupport(page, search);

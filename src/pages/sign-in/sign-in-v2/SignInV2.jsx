@@ -10,7 +10,6 @@ import { Use_sign_in } from '../../../components/action/signinFun';
 import { ClockLoader } from 'react-spinners';
 import Input from '../common/Input/Input';
 import Logo from '../../../assets/img/LoginLogo.png';
-
 function SignInV2() {
 	const [state, dispatch] = useReducer(reducer, initialState);
 

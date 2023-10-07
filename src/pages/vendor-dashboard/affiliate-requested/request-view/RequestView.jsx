@@ -15,7 +15,6 @@ function RequestView({ isLoading, product, mainProduct, refetch }) {
 	const [loading, setLoading] = useState(false);
 
 	const statusHandler = (id, status) => {
-		console.log(id, status);
 		if (status === '3') {
 			return rejected_status_handler(id, refetch);
 		} else {

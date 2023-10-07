@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { http } from '../../../../components/action/axiosInstance';
-// import { IconPicker } from 'react-fa-icon-picker';
+// import { IconPicker } from "react-fa-icon-picker";
 import { Link } from 'react-router-dom';
 import { ClockLoader } from 'react-spinners';
 import tost from '../../../../components/action/tost';
@@ -9,7 +9,6 @@ import InputEdit from '../../../../components/formComponent/InputEdit';
 import EditLoader from '../../../../components/loader/EditLoader';
 
 const MissionsModal = ({ missionId, missionFetch }) => {
-	const [singleMissionData, setSingleMissionData] = useState({});
 	const [loading, setLoading] = useState(false);
 	const [loadingData, setLoadingData] = useState(false);
 
@@ -40,7 +39,6 @@ const MissionsModal = ({ missionId, missionFetch }) => {
 		const getDataEditData = async () => {
 			setLoadingData(true);
 			const res = await http.get(`/admin/mission/${missionId}`);
-			setSingleMissionData(res?.data?.datas);
 			dispatch({ type: 'API_DATA', payload: res?.data?.datas });
 			setLoadingData(false);
 		};
@@ -67,7 +65,6 @@ const MissionsModal = ({ missionId, missionFetch }) => {
 			setLoading(false);
 		} catch (error) {
 			setLoading(false);
-			console.error(error);
 		}
 	};
 
@@ -133,17 +130,17 @@ const MissionsModal = ({ missionId, missionFetch }) => {
 										<div className="col-lg-12 mb-3">
 											<label htmlFor="">Icon</label>
 											{/* <IconPicker
-												value={state?.icon_class}
-												onChange={(e) =>
-													dispatch({
-														type: 'INPUT',
-														payload: {
-															name: 'icon_class',
-															value: e,
-														},
-													})
-												}
-											/> */}
+                        value={state?.icon_class}
+                        onChange={(e) =>
+                          dispatch({
+                            type: "INPUT",
+                            payload: {
+                              name: "icon_class",
+                              value: e,
+                            },
+                          })
+                        }
+                      /> */}
 										</div>
 									</div>
 								</div>

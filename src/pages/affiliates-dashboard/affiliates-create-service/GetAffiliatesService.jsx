@@ -15,8 +15,7 @@ function GetAffiliatesService() {
 
   const { serviceData, isLoading, refetch } = GetVendorServiceData(page);
 
-  console.log('service', serviceData)
-
+ 
   return (
     <div className="ec-content-wrapper">
       <Helmet>

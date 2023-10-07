@@ -3,7 +3,6 @@ import { Outlet } from 'react-router-dom';
 import Footer from '../components/footer/Footer';
 import TopNavBar from '../components/topNavBar/TopNavBar';
 import { useState } from 'react';
-import VendorSidebar from '../components/sidebar/VendorSidebar';
 import BarLoaders from '../components/loader/BarLoaders';
 import UserSidebar from '../components/sidebar/UserSidebar';
 import { UserProfileAPI } from '../api/user';

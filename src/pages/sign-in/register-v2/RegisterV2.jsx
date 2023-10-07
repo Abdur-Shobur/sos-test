@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Style from './Register.style.module.css';
 import Input from '../common/Input/Input';

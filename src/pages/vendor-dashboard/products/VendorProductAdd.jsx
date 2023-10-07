@@ -174,16 +174,6 @@ function VendorProductAdd() {
 			},
 		});
 	}, [qtyTotal]);
-	console.log(
-		incFieldStateColor.selected
-			.filter((e) => e.qty !== '' && e.qty !== null)
-			.filter(
-				(x) =>
-					(x.color_name !== null && x.size_name !== null) ||
-					(x.color_name !== null && x.size_name === null) ||
-					(x.color_name !== null && x.size_name !== null)
-			)
-	);
 
 	const submit_data = async (e) => {
 		e.preventDefault();
@@ -219,7 +209,6 @@ function VendorProductAdd() {
 						multipartConfig
 					)
 					.then((res) => {
-						console.log(res);
 						if (res.data.status === 200) {
 							setLoad(false);
 							navigate('/vendors-dashboard/product-list/all');
@@ -234,8 +223,7 @@ function VendorProductAdd() {
 						}
 					})
 					.catch((err) => {
-						console.log(err);
-						setLoad(false);
+ 						setLoad(false);
 						tost(err.message, false);
 					});
 			} else {

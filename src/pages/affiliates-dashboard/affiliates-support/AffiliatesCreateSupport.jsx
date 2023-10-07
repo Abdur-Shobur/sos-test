@@ -35,7 +35,6 @@ const AffiliatesCreateSupport = () => {
 		};
 		getDataEditData();
 	}, [state.data.support_box_category_id]);
-	console.log(state);
 
 	const handleSubmitData = async (e) => {
 		e.preventDefault();

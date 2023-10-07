@@ -256,3 +256,23 @@ export function getCookie(name) {
 	}
 	return null;
 }
+
+export function removeCookie(name, domain) {
+	const pastDate = new Date(0);
+	const expires = 'expires=' + pastDate.toUTCString();
+	document.cookie = name + '=;' + expires + `;path=/;domain=${domain}`;
+}
+
+export function getCookie2(name) {
+	const cookies = document.cookie.split('; ');
+	for (let i = 0; i < cookies.length; i++) {
+		const cookie = cookies[i];
+		const [cookieName, cookieValue] = cookie.split('=');
+
+		if (cookieName === name) {
+			// Decode the cookie value if needed
+			return decodeURIComponent(cookieValue);
+		}
+	}
+	return null; // Cookie not found
+}

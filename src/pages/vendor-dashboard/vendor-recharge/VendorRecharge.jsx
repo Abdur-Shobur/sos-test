@@ -29,8 +29,7 @@ const VendorRecharge = () => {
         tost(data?.data?.data?.amount[0] || data?.data?.data?.amount[1]);
         if (data?.data?.message === "Validation errors") {
           const errors = data?.data?.data;
-          console.log(errors);
-          const validationError = {
+           const validationError = {
             amount: errors["amount"] ? errors["amount"] : null,
           };
           dispatch({
@@ -45,8 +44,7 @@ const VendorRecharge = () => {
       }
     } catch (error) {
       setLoading(false);
-      console.error(error);
-    }
+     }
     setLoading(false);
   };
 

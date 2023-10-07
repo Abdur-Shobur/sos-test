@@ -1,8 +1,9 @@
+/* eslint-disable eqeqeq */
+/* eslint-disable no-unused-vars */
 import {
 	BrandData,
 	Category,
 	Color,
-	EditProductById,
 	Size,
 	SubCategory,
 } from '../../../components/action/getDataApi';
@@ -58,7 +59,6 @@ function VendorProductEdit() {
 	// reducer function
 
 	const [state, dispatch] = useReducer(reducer, initialState);
-	console.log(state);
 	// utility api [color, size, brand, category, sub category]
 	const { colors, isLoadingColor } = Color();
 	const { sizes, isLoadingSize } = Size();
@@ -152,7 +152,6 @@ function VendorProductEdit() {
 	};
 
 	// form update handler
-	// console.log(state.initial);
 
 	const handleSubmit = (e) => {
 		setLoad(true);
@@ -160,7 +159,6 @@ function VendorProductEdit() {
 		http
 			.post(`/vendor-update-product/${id}`, state.initial, multipartConfig)
 			.then((res) => {
-				// console.log(res);
 				if (res.data.status === 200) {
 					setLoad(false);
 					tost(res.data.message, false);
@@ -170,13 +168,11 @@ function VendorProductEdit() {
 					tost(res.data.message, false);
 
 					if (res.data.errors) {
-						console.log(res.data.errors);
 					}
 				}
 			})
 			.catch((er) => {
 				tost(er.message, false);
-				console.log(er);
 				setLoad(false);
 			});
 	};

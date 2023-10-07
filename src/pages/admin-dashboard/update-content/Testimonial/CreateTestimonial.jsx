@@ -108,8 +108,7 @@ const CreateTestimonial = () => {
       }
     } catch (error) {
       setLoading(false);
-      console.error(error);
-    }
+     }
     setLoading(false);
   };
 

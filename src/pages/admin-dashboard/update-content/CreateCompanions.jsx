@@ -1,5 +1,5 @@
 import React from 'react';
-// import { IconPicker } from 'react-fa-icon-picker';
+// import { IconPicker } from "react-fa-icon-picker";
 import { Link, useNavigate } from 'react-router-dom';
 import InputMain from '../../../components/formComponent/InputMain';
 import { useReducer } from 'react';
@@ -67,7 +67,6 @@ const CreateCompanions = () => {
 			setLoading(false);
 		} catch (error) {
 			setLoading(false);
-			console.error(error);
 		}
 	};
 
@@ -113,22 +112,22 @@ const CreateCompanions = () => {
 									/>
 								</div>
 							</div>
-
-							<div className="col-lg-12 mb-3">
-								<label htmlFor="">Icon</label>
-								{/* <IconPicker
-									value={state.data.icon}
-									onChange={(e) =>
-										dispatch({
-											type: 'INPUT',
-											payload: {
-												name: 'icon',
-												value: e,
-											},
-										})
-									}
-								/> */}
-							</div>
+							{/* react-fa-icon-picker */}
+							{/* <div className="col-lg-12 mb-3">
+                <label htmlFor="">Icon</label>
+                <IconPicker
+                  value={state.data.icon}
+                  onChange={(e) =>
+                    dispatch({
+                      type: "INPUT",
+                      payload: {
+                        name: "icon",
+                        value: e,
+                      },
+                    })
+                  }
+                />
+              </div> */}
 
 							<div className="col-lg-12">
 								<div className="form-group mb-4 position-relative">

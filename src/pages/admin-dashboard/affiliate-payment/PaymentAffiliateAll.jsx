@@ -18,7 +18,6 @@ function PaymentAffiliateAll() {
 	const [isOpen, setIsOpen] = useState({ open: false, id: null });
 	const [page, setPage] = useState(null);
 	const [search, setSearch] = useState(' ');
-	const [loading, setLoading] = useState(false);
 
 	const { searchHandler } = useDebounce(setSearch, setPage);
 
@@ -62,7 +61,6 @@ function PaymentAffiliateAll() {
 															isOpen={isOpen}
 															refetch={refetch}
 															setIsOpen={setIsOpen}
-															setLoading={setLoading}
 														/>
 													))
 												) : (
@@ -77,7 +75,6 @@ function PaymentAffiliateAll() {
 											isOpen={isOpen}
 											refetch={refetch}
 											setIsOpen={setIsOpen}
-											setLoading={setLoading}
 										/>
 									)}
 

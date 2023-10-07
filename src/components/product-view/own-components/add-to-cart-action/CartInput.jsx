@@ -2,7 +2,6 @@ import React from 'react';
 
 function CartInput({ state, dispatch, data }) {
 	const currentID = state.selectedData.map((e) => e.id);
-	console.log(data);
 
 	return (
 		<div className="row">

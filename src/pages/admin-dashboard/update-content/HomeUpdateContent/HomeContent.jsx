@@ -49,8 +49,6 @@ const HomeContent = () => {
 		}
 	};
 
-	// console.log(state);
-
 	return (
 		<div>
 			{isLoading ? (
@@ -539,6 +537,7 @@ const HomeContent = () => {
 							{/* card 1 */}
 							<div className="col-lg-2 mb-3">
 								<label htmlFor="">Icon</label>
+								{/* react-fa-icon-picker */}
 								{/* <IconPicker
 									value={
 										state.chose_card_one_icon
@@ -584,6 +583,7 @@ const HomeContent = () => {
 							{/* card 2 */}
 							<div className="col-lg-2 mb-3">
 								<label htmlFor="">Icon</label>
+								{/* react-fa-icon-picker */}
 								{/* <IconPicker
 									value={
 										state.chose_card_two_icon
@@ -629,6 +629,7 @@ const HomeContent = () => {
 							{/* card 3 */}
 							<div className="col-lg-2 mb-3">
 								<label htmlFor="">Icon</label>
+								{/* react-fa-icon-picker */}
 								{/* <IconPicker
 									value={
 										state.chose_card_three_icon
@@ -674,6 +675,7 @@ const HomeContent = () => {
 							{/* card 4 */}
 							<div className="col-lg-2 mb-3">
 								<label htmlFor="">Icon</label>
+								{/* react-fa-icon-picker */}
 								{/* <IconPicker
 									value={
 										state.chose_card_four_icon

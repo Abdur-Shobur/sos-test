@@ -63,8 +63,7 @@ const CreateSubCategory = () => {
       }
     } catch (error) {
       setLoading(false);
-      console.error(error);
-    }
+     }
     setLoading(false);
   };
   // loading animation

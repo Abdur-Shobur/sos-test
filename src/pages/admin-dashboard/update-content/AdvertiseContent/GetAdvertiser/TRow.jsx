@@ -14,8 +14,7 @@ function TRow({ data, i, page, refetch }) {
   const deleteHandelr = (id) => {
     const delFun = async () => {
       return await http.delete(`/admin/advertise/${id}`).then((e) => {
-        console.log(e);
-        tost(e?.data?.message);
+         tost(e?.data?.message);
         refetch();
       });
     };

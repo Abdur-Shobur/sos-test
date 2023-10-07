@@ -14,6 +14,7 @@ import CommonTableHead from "../../../../../components/table/CommonTableHead";
 function Vendors() {
   const [page, setPage] = useState(null);
   const [search, setSearch] = useState(" ");
+  	// eslint-disable-next-line no-unused-vars
   const { searchHandler } = useDebounce(setSearch, setPage);
   const { advertiserData, isLoading, refetch } = GetAdminAdvertiseData(
     page,

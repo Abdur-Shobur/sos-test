@@ -74,8 +74,7 @@ const ServiceSubCategoryModal = ({ clickId, subFetch }) => {
       setLoading(false);
     } catch (error) {
       setLoading(false);
-      console.error(error);
-    }
+     }
   };
 
   return (

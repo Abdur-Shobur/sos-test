@@ -14,7 +14,6 @@ function AddNewCategory({ refetch, isLoading }) {
 	const [error, setError] = useState({});
 	const [loading, setLoading] = useState(false);
 
-	const options = [];
 	const [state, dispatch] = useReducer(categoryReducer, initialState);
 
 	// image preview
@@ -34,7 +33,6 @@ function AddNewCategory({ refetch, isLoading }) {
 		};
 
 		http.post(`/store-category`, data, multipartConfig).then((res) => {
-		 
 			if (res.data.status === 400) {
 				setError(res.data.errors);
 				tost(res.data.errors.name[0]);

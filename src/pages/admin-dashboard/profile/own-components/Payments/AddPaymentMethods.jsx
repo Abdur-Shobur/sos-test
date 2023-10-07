@@ -6,7 +6,7 @@ import { AdminBankList } from '../../../../../api/admin/payment';
 
 function AddPaymentMethods() {
 	const [openPaymentForm, setPaymentForm] = useState(false);
-	const { banks, isLoading, refetch } = AdminBankList();
+	const { banks, refetch } = AdminBankList();
 
 	return (
 		<div className="row">

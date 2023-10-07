@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 export const initialStateAction = {
 	mainData: [],
 	uniqueColor: [],

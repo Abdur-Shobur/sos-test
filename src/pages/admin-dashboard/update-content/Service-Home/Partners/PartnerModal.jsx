@@ -13,8 +13,7 @@ import EditLoader from "../../../../../components/loader/EditLoader";
 
 const PartnerModal = ({ clickId, partnerRefetch }) => {
   const [loadingData, setLoadingData] = useState(false);
-  const [modalData, setModalData] = useState({});
-  const [loading, setLoading] = useState(false);
+   const [loading, setLoading] = useState(false);
 
   const initialState = {
     image: {},
@@ -41,8 +40,7 @@ const PartnerModal = ({ clickId, partnerRefetch }) => {
     const getDataEditData = async () => {
       setLoadingData(true);
       const res = await http.get(`/admin/partner/${clickId}`);
-      setModalData(res?.data?.datas);
-      dispatch({ type: "API_DATA", payload: res?.data?.datas });
+       dispatch({ type: "API_DATA", payload: res?.data?.datas });
       setLoadingData(false);
     };
     getDataEditData();
@@ -71,8 +69,7 @@ const PartnerModal = ({ clickId, partnerRefetch }) => {
       setLoading(false);
     } catch (error) {
       setLoading(false);
-      console.error(error);
-    }
+     }
   };
 
   return (

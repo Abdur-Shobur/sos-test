@@ -104,13 +104,11 @@ const ServiceDelivery = () => {
       }
     } catch (error) {
       setLoading(false);
-      console.error(error);
-    }
+     }
     setLoading(false);
   };
 
-  console.log("state", state);
-
+ 
   // loading animation
   useEffect(() => {
     Aos.init({ delay: 300, offset: 50, duration: 300 });

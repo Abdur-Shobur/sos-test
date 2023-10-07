@@ -13,19 +13,14 @@ import { Helmet } from 'react-helmet';
 import { GetAdminHomeSettingData } from '../../../../api/admin/apiAdmin';
 import InputEdit from '../../../../components/formComponent/InputEdit';
 import EditLoader from '../../../../components/loader/EditLoader';
-import { useEffect } from 'react';
 import { initialState, reducer } from './actions';
-import {
-	ImagePreview,
-	removeNullAndDelete_urlObj,
-} from '../../../../components/action/actions';
+import { removeNullAndDelete_urlObj } from '../../../../components/action/actions';
 
 const AdvertiseContentUpdate = () => {
 	const [loading, setLoading] = useState(false);
 	const { homeData, refetch, isLoading } = GetAdminHomeSettingData();
 	const [state, dispatch] = useReducer(reducer, initialState);
 	const values = removeNullAndDelete_urlObj(state);
-	console.log(homeData);
 	const handleSubmitData = async (e) => {
 		e.preventDefault();
 		setLoading(true);
@@ -36,7 +31,6 @@ const AdvertiseContentUpdate = () => {
 				{ ...values, _method: 'POST' },
 				multipartConfig
 			);
-			console.log(data);
 
 			if (data.status === 400) {
 				tost(data?.data?.errors.name[0]);
@@ -51,8 +45,6 @@ const AdvertiseContentUpdate = () => {
 			setLoading(false);
 
 			tost('try later, something is wrong');
-
-			console.error(error);
 		}
 	};
 

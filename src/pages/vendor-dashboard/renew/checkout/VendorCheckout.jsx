@@ -36,7 +36,6 @@ const VendorCheckout = () => {
 
 		try {
 			const data = await http.post(`/renew-subscription`, state);
-			console.log(data)
 			if (data?.data?.result === 'true') {
 				window.location.href = data?.data?.payment_url;
 			} else if (data?.data?.data === 'success') {
@@ -47,8 +46,7 @@ const VendorCheckout = () => {
 			}
 		} catch (error) {
 			setLoading(false);
-			console.error(error);
-		}
+ 		}
 		setLoading(false);
 	};
 

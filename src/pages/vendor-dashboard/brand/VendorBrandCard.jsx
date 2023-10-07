@@ -1,14 +1,8 @@
 import React, { useEffect, useReducer } from 'react';
 import { useQuery } from 'react-query';
 import Img_1 from '../../../assets/img/brand/1.jpg';
-import {
-	http,
-	multipartConfig,
-} from '../../../components/action/axiosInstance';
+import { http } from '../../../components/action/axiosInstance';
 import { reducer } from '../../../components/action/reducerAction';
-import BrandFile from '../../../components/formComponent/BrandFile';
-import Input from '../../../components/formComponent/InputEdit';
-import Select from '../../../components/formComponent/SelectEdit';
 import { FaRegEdit } from 'react-icons/fa';
 import { AiOutlineDelete } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
@@ -20,6 +14,7 @@ function BrandCard({ data, delete_data_dandler, refetch }) {
 	});
 	const editableData = editData?.data?.category;
 	const initialState = {};
+	// eslint-disable-next-line no-unused-vars
 	const [state, dispatch] = useReducer(reducer, initialState);
 
 	useEffect(() => {
@@ -29,22 +24,20 @@ function BrandCard({ data, delete_data_dandler, refetch }) {
 		});
 	}, [editableData]);
 
-	const brand_update = async (e) => {
-		e.preventDefault();
-		try {
-			const data_fetch = await http.post(
-				`/update-brand/${data?.id}`,
-				state,
-				multipartConfig
-			);
+	// const brand_update = async (e) => {
+	// 	e.preventDefault();
+	// 	try {
+	// 		const data_fetch = await http.post(
+	// 			`/update-brand/${data?.id}`,
+	// 			state,
+	// 			multipartConfig
+	// 		);
 
-			if (data_fetch.data.status === 200) {
-				refetch();
-			}
-		} catch (error) {
-			console.error(error);
-		}
-	};
+	// 		if (data_fetch.data.status === 200) {
+	// 			refetch();
+	// 		}
+	// 	} catch (error) {}
+	// };
 
 	return (
 		<div className="col-xxl-2 col-xl-3 col-lg-4 col-md-6">

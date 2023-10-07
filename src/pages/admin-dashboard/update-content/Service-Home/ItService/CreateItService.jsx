@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-// import { IconPicker } from 'react-fa-icon-picker';
+// import { IconPicker } from "react-fa-icon-picker";
 import { Link, useNavigate } from 'react-router-dom';
 import InputMain from '../../../../../components/formComponent/InputMain';
 import { useReducer } from 'react';
@@ -66,7 +66,6 @@ const CreateItService = () => {
 			setLoading(false);
 		} catch (error) {
 			setLoading(false);
-			console.error(error);
 		}
 	};
 
@@ -116,17 +115,17 @@ const CreateItService = () => {
 							<div className="col-lg-12 mb-3">
 								<label htmlFor="">Icon</label>
 								{/* <IconPicker
-									value={state.data.icon}
-									onChange={(e) =>
-										dispatch({
-											type: 'INPUT',
-											payload: {
-												name: 'icon',
-												value: e,
-											},
-										})
-									}
-								/> */}
+                  value={state.data.icon}
+                  onChange={(e) =>
+                    dispatch({
+                      type: "INPUT",
+                      payload: {
+                        name: "icon",
+                        value: e,
+                      },
+                    })
+                  }
+                /> */}
 							</div>
 
 							<div className="col-lg-12">

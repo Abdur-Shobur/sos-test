@@ -17,6 +17,7 @@ import Aos from "aos";
 import { RejectedReasons } from "./RejectReasone";
 
 const AdminGetVendorService = () => {
+  // eslint-disable-next-line no-unused-vars
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(null);
 

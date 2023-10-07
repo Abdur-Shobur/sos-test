@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 export const initialState = {
 	api: {
 		category: [],
@@ -356,6 +357,7 @@ export const reducer = (state = initialState, action) => {
 				initial: {
 					...state.initial,
 					specifications: state.initial.specifications.filter(
+						// eslint-disable-next-line eqeqeq
 						(e) => e.id != action.payload
 					),
 				},

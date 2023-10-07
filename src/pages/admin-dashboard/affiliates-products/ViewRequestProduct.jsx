@@ -5,8 +5,7 @@ import ProductView from '../../../components/product-view/ProductView';
 function ViewRequestProduct() {
 	const { id } = useParams();
 
-	const { isLoading, product, isError } = AffiliatesProductView(id);
-	console.log(isError);
+	const { isLoading, product } = AffiliatesProductView(id);
 
 	return (
 		<div className="content">

@@ -1,23 +1,32 @@
 import { useContext } from 'react';
-import { Navigate } from 'react-router-dom';
-import swal from 'sweetalert';
+import { Navigate, useNavigate } from 'react-router-dom';
 import { UseAuth } from '../auth/AuthContext';
+import { LIVE_LINK, TEST } from '../components/env';
 
 const CheckPermission = ({ roleID, children }) => {
-	const { role, loading } = useContext(UseAuth);
-	console.log(loading, 'role permission loading');
-	console.log(role, 'role permission role');
+	const { role } = useContext(UseAuth);
+	const navigate = useNavigate();
 
 	if (roleID === role) {
 		return children;
 	}
+	// if (role) {
+	// 	if (role === '1') {
+	// 		return <Navigate to={`/`} replace={true} />;
+	// 	} else if (role === '2') {
+	// 		return <Navigate to={`/vendors-dashboard`} replace={true} />;
+	// 	} else if (role === '3') {
+	// 		return <Navigate to={`/affiliates-dashboard`} replace={true} />;
+	// 	} else {
+	// 		return <Navigate to={`/user-dashboard`} replace={true} />;
+	// 	}
+	// }
 
-	// return children;
-
-	localStorage.removeItem('role');
-	localStorage.removeItem('token');
-
-	return <Navigate to="/sign-in" />;
+	if (TEST === 'ok') {
+		return children;
+	}
+	// (window.location.href = `${LIVE_LINK}/login`);
+	return navigate(`${LIVE_LINK}/login`);
 };
 
 export default CheckPermission;

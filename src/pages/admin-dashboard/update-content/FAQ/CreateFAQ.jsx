@@ -61,8 +61,7 @@ const CreateFAQ = () => {
       }
     } catch (error) {
       setLoading(false);
-      console.error(error);
-    }
+     }
     setLoading(false);
   };
 

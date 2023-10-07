@@ -1,9 +1,6 @@
 import React from 'react';
 import RatioCard from '../../components/cards/RatioCard';
-import NewCustomers from '../../components/newCustomers/NewCustomers';
 // import RecentOrders from '../../components/recentOrders/RecentOrders';
-import SoldByItems from '../../components/soldByItems/SoldByItems';
-import TopProducts from '../../components/topProducts/TopProducts';
 import { Helmet } from 'react-helmet';
 import {
 	GetAffiliateDashboardData,

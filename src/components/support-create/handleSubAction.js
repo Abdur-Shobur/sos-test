@@ -18,7 +18,6 @@ export const HandleSubmitData = async (
 			tost(data?.data?.errors?.name[0]);
 			if (data?.data?.message === 'Validation errors') {
 				const errors = data?.data?.data;
-				console.log(errors);
 				const validationError = {
 					subject: errors['subject'] ? errors['subject'] : null,
 					support_box_category_id: errors['support_box_category_id']

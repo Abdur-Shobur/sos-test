@@ -66,8 +66,7 @@ const MemberModal = ({ clickId, membersFetch }) => {
     e.preventDefault();
     setLoading(true);
     setLoading(false);
-    console.log(state);
-    delete state.url;
+     delete state.url;
 
     try {
       const data = await http.post(
@@ -76,8 +75,7 @@ const MemberModal = ({ clickId, membersFetch }) => {
         multipartConfig
       );
 
-      console.log(data);
-      if (data.data.status === 400) {
+       if (data.data.status === 400) {
         tost(data?.data?.errors.name[0]);
       } else if (data.data.status === 200) {
         membersFetch();
@@ -88,8 +86,7 @@ const MemberModal = ({ clickId, membersFetch }) => {
       setLoading(false);
     } catch (error) {
       setLoading(false);
-      console.error(error);
-    }
+     }
   };
 
   return (

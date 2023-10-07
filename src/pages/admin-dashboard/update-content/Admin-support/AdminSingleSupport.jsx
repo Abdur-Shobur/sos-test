@@ -65,9 +65,7 @@ const AdminSingleSupport = () => {
 			} else if (newData?.data?.data === 'success') {
 				tost(newData?.data?.message);
 			}
-		} catch (error) {
-			console.error(error);
-		}
+		} catch (error) {}
 		setLoadingBtn(false);
 	};
 

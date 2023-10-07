@@ -4,9 +4,7 @@ import { downloadImage, time } from "../../../components/action/actions";
 import { FiDownload } from "react-icons/fi";
 
 const DeliveryInfo = ({ orderSingleData }) => {
-  // console.log(
-  //   orderSingleData.orderdelivery[0]?.deliveryfiles[0]?.files.endsWith("jpg")
-  // );
+ 
   return (
     <div className={style.packageInfo}>
       <h3 className={style.heading}>Delivery Info</h3>

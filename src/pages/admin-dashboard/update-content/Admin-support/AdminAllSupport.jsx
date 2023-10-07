@@ -2,19 +2,13 @@ import React, { useState } from 'react';
 import Aos from 'aos';
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-// import { useDebounce } from '../../../../components/action/useDebounce';
 import CommonBreadCrumbs from '../../../../components/breadcrumbs/CommonBreadCrumbs';
 import { GetAdminSupportData } from '../../../../api/admin/apiAdmin';
 import SupportViewTable from '../../../../components/support-create/SupportViewTable';
 
 function AdminAllSupport() {
 	const [page, setPage] = useState(null);
-	const [search, setSearch] = useState(' ');
-	// const { searchHandler } = useDebounce(setSearch, setPage);
-	const { problemTopicData, isLoading, refetch } = GetAdminSupportData(
-		page,
-		search
-	);
+	const { problemTopicData, isLoading, refetch } = GetAdminSupportData(page);
 
 	// loading animation
 	useEffect(() => {

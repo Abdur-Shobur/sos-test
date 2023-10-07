@@ -1,4 +1,3 @@
-import { toast } from 'react-toastify';
 import swal from 'sweetalert';
 import { http } from '../../../../components/action/axiosInstance';
 import tost from '../../../../components/action/tost';

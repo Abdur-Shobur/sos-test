@@ -68,8 +68,7 @@ const CreateSupportTopic = () => {
 
     try {
       const data = await http.post(`/admin/supportproblem-topic`, getData);
-      console.log(data);
-      if (data.data.data !== "success") {
+       if (data.data.data !== "success") {
         tost(data?.data?.data?.name[0]);
       } else if (data.data.data === "success") {
         navigate("/admin/support-problem-topic");
@@ -77,8 +76,7 @@ const CreateSupportTopic = () => {
       }
     } catch (error) {
       setLoading(false);
-      console.error(error);
-    }
+     }
     setLoading(false);
   };
 

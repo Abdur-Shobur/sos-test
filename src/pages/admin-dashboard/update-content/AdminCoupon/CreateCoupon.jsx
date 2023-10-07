@@ -46,8 +46,7 @@ const CreateCoupon = () => {
       setLoading(false);
     } catch (error) {
       setLoading(false);
-      console.error(error);
-    }
+     }
   };
 
   // loading animation

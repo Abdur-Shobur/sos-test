@@ -14,8 +14,7 @@ function GetVendorAdvertiser() {
   const [page, setPage] = useState(null);
   const { advertiserData, isLoading, refetch } = GetVendorAdvertiserData(page);
 
-  console.log("venodr", advertiserData);
-  // loading animation
+   // loading animation
   useEffect(() => {
     Aos.init({ delay: 300, offset: 50, duration: 300 });
   }, []);

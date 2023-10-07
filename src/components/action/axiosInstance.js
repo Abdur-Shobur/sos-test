@@ -8,9 +8,8 @@ export const http = axios.create({
 });
 http.interceptors.request.use(function (config) {
 	const cK = getCookie('userInfo');
-
-	const token = localStorage.getItem('token');
-	config.headers.Authorization = token ? `Bearer ${token}` : '';
+	// const token = localStorage.getItem('token');
+	config.headers.Authorization = cK ? `Bearer ${cK.token}` : '';
 	return config;
 });
 

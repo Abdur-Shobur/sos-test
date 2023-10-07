@@ -16,7 +16,7 @@ function VendorsDashboard() {
 	const { chartData, isLoading: chartIsLoading } =
 		GetVendorOrderVsRevenueChart();
 	const { product, isLoading: toProductLoading } = GetVendorTopSellingProduct();
-	console.log(product);
+
 	useEffect(() => {
 		Aos.init({ delay: 300, offset: 50, duration: 300 });
 	}, []);

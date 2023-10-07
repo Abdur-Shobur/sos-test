@@ -13,7 +13,7 @@ export const AffiliateProfileAPI = () => {
 	);
 	const res = data?.data;
 	const user = data?.data?.user;
-	return { user, isLoading, refetch, res };
+	return { user, isLoading, refetch, res, isError };
 };
 
 export const VendorProductViewByAffiliate = (id) => {

@@ -5,7 +5,7 @@ import { useReducer } from 'react';
 import { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { ClockLoader } from 'react-spinners';
-// import { IconPicker } from 'react-fa-icon-picker';
+// import { IconPicker } from "react-fa-icon-picker";
 import { http } from '../../../../components/action/axiosInstance';
 import tost from '../../../../components/action/tost';
 import CommonBreadCrumbs from '../../../../components/breadcrumbs/CommonBreadCrumbs';
@@ -60,7 +60,6 @@ const CreateMissions = () => {
 			}
 		} catch (error) {
 			setLoading(false);
-			console.error(error);
 		}
 		setLoading(false);
 	};
@@ -111,17 +110,17 @@ const CreateMissions = () => {
 							<div className="col-lg-12 mb-3">
 								<label htmlFor="">Icon</label>
 								{/* <IconPicker
-									value={state.data.icon_class}
-									onChange={(e) =>
-										dispatch({
-											type: 'INPUT',
-											payload: {
-												name: 'icon_class',
-												value: e,
-											},
-										})
-									}
-								/> */}
+                  value={state.data.icon_class}
+                  onChange={(e) =>
+                    dispatch({
+                      type: "INPUT",
+                      payload: {
+                        name: "icon_class",
+                        value: e,
+                      },
+                    })
+                  }
+                /> */}
 							</div>
 						</div>
 					</div>

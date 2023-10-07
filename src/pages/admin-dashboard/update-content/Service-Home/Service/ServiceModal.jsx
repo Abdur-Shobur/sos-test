@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { http } from '../../../../../components/action/axiosInstance';
-// import { IconPicker } from 'react-fa-icon-picker';
+// import { IconPicker } from "react-fa-icon-picker";
 import { Link } from 'react-router-dom';
 import { ClockLoader } from 'react-spinners';
 import tost from '../../../../../components/action/tost';
@@ -10,8 +10,7 @@ import TextAreaEdit from '../../../../../components/formComponent/TextAreaEdit';
 import EditLoader from '../../../../../components/loader/EditLoader';
 
 const ServiceModal = ({ clickId, serviceRefetch }) => {
-	const [modalData, setModalData] = useState({});
-	const [loading, setLoading] = useState(false);
+ 	const [loading, setLoading] = useState(false);
 	const [loadingData, setLoadingData] = useState(false);
 
 	const initialState = {
@@ -43,8 +42,7 @@ const ServiceModal = ({ clickId, serviceRefetch }) => {
 		const getDataEditData = async () => {
 			setLoadingData(true);
 			const res = await http.get(`/admin/service/${clickId}`);
-			setModalData(res?.data?.datas);
-			dispatch({ type: 'API_DATA', payload: res?.data?.datas });
+ 			dispatch({ type: 'API_DATA', payload: res?.data?.datas });
 			setLoadingData(false);
 		};
 		getDataEditData();
@@ -70,7 +68,6 @@ const ServiceModal = ({ clickId, serviceRefetch }) => {
 			setLoading(false);
 		} catch (error) {
 			setLoading(false);
-			console.error(error);
 		}
 	};
 
@@ -136,17 +133,17 @@ const ServiceModal = ({ clickId, serviceRefetch }) => {
 										<div className="col-lg-12 mb-3">
 											<label htmlFor="">Icon</label>
 											{/* <IconPicker
-												value={state?.icon}
-												onChange={(e) =>
-													dispatch({
-														type: 'INPUT',
-														payload: {
-															name: 'icon',
-															value: e,
-														},
-													})
-												}
-											/> */}
+                        value={state?.icon}
+                        onChange={(e) =>
+                          dispatch({
+                            type: "INPUT",
+                            payload: {
+                              name: "icon",
+                              value: e,
+                            },
+                          })
+                        }
+                      /> */}
 										</div>
 
 										<div className="col-lg-12">

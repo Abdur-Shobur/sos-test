@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 import React, { useEffect, useState } from "react";
 import { http } from "../../../../components/action/axiosInstance";
 import { Link } from "react-router-dom";
@@ -10,8 +11,7 @@ import { GetAdminCategory } from "../../../../api/admin/apiAdmin";
 
 const ProblemTopicModal = ({ clickId, problemFetch }) => {
   const [loadingData, setLoadingData] = useState(false);
-  const [modalData, setModalData] = useState({});
-  const [loading, setLoading] = useState(false);
+   const [loading, setLoading] = useState(false);
   const { categoryData } = GetAdminCategory();
   const initialState = {
     name: "",
@@ -42,8 +42,7 @@ const ProblemTopicModal = ({ clickId, problemFetch }) => {
     const getDataEditData = async () => {
       setLoadingData(true);
       const res = await http.get(`/admin/supportproblem-topic/${clickId}`);
-      setModalData(res?.data?.message);
-      dispatch({ type: "API_DATA", payload: res?.data?.message });
+       dispatch({ type: "API_DATA", payload: res?.data?.message });
       setLoadingData(false);
     };
     getDataEditData();
@@ -59,8 +58,7 @@ const ProblemTopicModal = ({ clickId, problemFetch }) => {
         ...state,
         _method: "PUT",
       });
-      console.log(data);
-      if (data.data.data !== "success") {
+       if (data.data.data !== "success") {
         tost(data?.data?.errors.name[0]);
       } else if (data.data.data === "success") {
         problemFetch();

@@ -42,7 +42,6 @@ function Checkout() {
 			},
 		});
 	}, [cartData]);
-	console.log(state);
 
 	const continueToCheckoutHandler = () => {
 		http

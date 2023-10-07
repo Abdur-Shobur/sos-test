@@ -7,7 +7,6 @@ import {
 	http,
 	multipartConfig,
 } from '../../../../../components/action/axiosInstance';
-import { toast } from 'react-toastify';
 import swal from 'sweetalert';
 import tost from '../../../../../components/action/tost';
 

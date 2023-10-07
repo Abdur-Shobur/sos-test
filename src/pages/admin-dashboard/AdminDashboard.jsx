@@ -25,7 +25,6 @@ function AdminDashboard() {
 	} = GetAdminRecentOrders10();
 	const { categoryStatus, isLoading: CategoryStaticsLoading } =
 		GetCategoryByStatic();
-	console.log(categoryStatus);
 
 	return (
 		<>

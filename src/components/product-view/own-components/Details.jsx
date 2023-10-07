@@ -1,9 +1,9 @@
 import React from 'react';
 
 function Details({ product }) {
-	const obj = {
-		variants: null,
-	};
+	// const obj = {
+	// 	variants: null,
+	// };
 
 	return (
 		<>

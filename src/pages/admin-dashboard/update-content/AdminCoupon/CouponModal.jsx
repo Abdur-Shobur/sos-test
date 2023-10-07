@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 import React, { useEffect, useState } from 'react';
 import { http } from '../../../../components/action/axiosInstance';
 import { Link } from 'react-router-dom';
@@ -6,12 +7,9 @@ import tost from '../../../../components/action/tost';
 import InputEdit from '../../../../components/formComponent/InputEdit';
 import EditLoader from '../../../../components/loader/EditLoader';
 import { GetAdminCouponUser } from '../../../../api/admin/apiAdmin';
-import { initialState, reducer } from './update-coupon';
 import DatePicker from 'react-date-picker';
 
 const CouponModal = ({ clickId, couponFetch, state, dispatch }) => {
-	console.log(clickId);
-	const [modalData, setModalData] = useState({});
 	const [loading, setLoading] = useState(false);
 	const [loadingData, setLoadingData] = useState(false);
 	const { couponUserData } = GetAdminCouponUser();
@@ -20,8 +18,6 @@ const CouponModal = ({ clickId, couponFetch, state, dispatch }) => {
 		const getDataEditData = async () => {
 			setLoadingData(true);
 			const res = await http.get(`/admin/coupons/${clickId}`);
-			console.log(res);
-			setModalData(res?.data?.message);
 			dispatch({ type: 'API_DATA', payload: res?.data?.message });
 
 			setLoadingData(false);
@@ -30,10 +26,6 @@ const CouponModal = ({ clickId, couponFetch, state, dispatch }) => {
 			getDataEditData();
 		}
 	}, [clickId]);
-
-	console.log(state);
-	console.log(Object.values(state.apiRes));
-	console.log(Object.values(state.apiRes).some((e) => e));
 
 	const handleSubmitData = async (e) => {
 		// dispatch({
@@ -56,7 +48,6 @@ const CouponModal = ({ clickId, couponFetch, state, dispatch }) => {
 				...getData,
 				_method: 'PUT',
 			});
-			console.log(data, 'dasfsdfklj');
 			if (data.data.data !== 'success') {
 				tost(data?.data?.message);
 			} else if (data.data.data === 'success') {
@@ -68,7 +59,6 @@ const CouponModal = ({ clickId, couponFetch, state, dispatch }) => {
 			setLoading(false);
 		} catch (error) {
 			setLoading(false);
-			console.error(error, 'error');
 		}
 	};
 

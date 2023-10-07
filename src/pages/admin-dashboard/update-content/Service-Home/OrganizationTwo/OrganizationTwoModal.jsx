@@ -70,7 +70,6 @@ const OrganizationTwoModal = ({ clickId, organizationTwoRefetch }) => {
 			setLoading(false);
 		} catch (error) {
 			setLoading(false);
-			console.error(error);
 		}
 	};
 

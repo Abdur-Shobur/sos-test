@@ -10,8 +10,6 @@ import 'react-calendar/dist/Calendar.css';
 import { ToastContainer } from 'react-toastify';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import AuthContext from './auth/AuthContext';
-import { Suspense } from 'react';
-import { startTransition } from 'react';
 
 function App() {
 	const queryClient = new QueryClient();

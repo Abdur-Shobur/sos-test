@@ -59,8 +59,7 @@ function AdminAddNewUser() {
     e.target.reset();
   };
 
-  console.log("state", state);
-
+ 
   // loading animation
   useEffect(() => {
     Aos.init({ delay: 300, offset: 50, duration: 300 });

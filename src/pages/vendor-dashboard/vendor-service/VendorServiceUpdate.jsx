@@ -120,15 +120,13 @@ const VendorServiceUpdate = () => {
 			delete formDataA.images;
 		}
 
-		console.log(formDataA);
-		try {
+ 		try {
 			const data = await http.post(
 				`/main-services/${id}`,
 				{ ...formDataA, _method: 'PATCH' },
 				multipartConfig
 			);
-			console.log(data, 'API RES');
-			if (data.data.message === 'Validation errors') {
+ 			if (data.data.message === 'Validation errors') {
 				dispatch({
 					type: 'API_RESPONSE',
 					payload: data.data.data,

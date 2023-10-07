@@ -9,7 +9,6 @@ export const status_handler = (id, status, setLoad, refetch) => {
 		return http
 			.post(`/admin/order/update/${id}`, { status: status })
 			.then((res) => {
-				console.log(res);
 				refetch();
 				if (res.data.status === 200) {
 					toast(res.data.message, {

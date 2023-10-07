@@ -10,7 +10,6 @@ import TextAreaEdit from '../../../components/formComponent/TextAreaEdit';
 import EditLoader from '../../../components/loader/EditLoader';
 
 const CompanionsModal = ({ clickId, companionFefetch }) => {
-	const [modalData, setModalData] = useState({});
 	const [loading, setLoading] = useState(false);
 	const [loadingData, setLoadingData] = useState(false);
 
@@ -43,7 +42,6 @@ const CompanionsModal = ({ clickId, companionFefetch }) => {
 		const getDataEditData = async () => {
 			setLoadingData(true);
 			const res = await http.get(`/admin/companion/${clickId}`);
-			setModalData(res?.data?.datas);
 			dispatch({ type: 'API_DATA', payload: res?.data?.datas });
 			setLoadingData(false);
 		};
@@ -70,7 +68,6 @@ const CompanionsModal = ({ clickId, companionFefetch }) => {
 			setLoading(false);
 		} catch (error) {
 			setLoading(false);
-			console.error(error);
 		}
 	};
 
@@ -132,22 +129,22 @@ const CompanionsModal = ({ clickId, companionFefetch }) => {
 												/>
 											</div>
 										</div>
-
-										<div className="col-lg-12 mb-3">
-											<label htmlFor="">Icon</label>
-											{/* <IconPicker
-												value={state?.icon}
-												onChange={(e) =>
-													dispatch({
-														type: 'INPUT',
-														payload: {
-															name: 'icon',
-															value: e,
-														},
-													})
-												}
-											/> */}
-										</div>
+										{/* react-fa-icon-picker */}
+										{/* <div className="col-lg-12 mb-3">
+                      <label htmlFor="">Icon</label>
+                      <IconPicker
+                        value={state?.icon}
+                        onChange={(e) =>
+                          dispatch({
+                            type: "INPUT",
+                            payload: {
+                              name: "icon",
+                              value: e,
+                            },
+                          })
+                        }
+                      />
+                    </div> */}
 
 										<div className="col-lg-12">
 											<div className="form-group mb-4 position-relative">

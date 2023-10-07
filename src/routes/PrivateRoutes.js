@@ -1,13 +1,9 @@
 import React, { useContext } from 'react';
-import { Navigate, useLocation } from 'react-router-dom';
 import { PuffLoader } from 'react-spinners';
 import { UseAuth } from '../auth/AuthContext';
 function PrivateRoutes({ children }) {
-	const { role, loading, cookie } = useContext(UseAuth);
-	const location = useLocation();
-	console.log(role, 'Role');
-	console.log(cookie, 'cookie');
-	console.log(loading, 'loading');
+	const { loading } = useContext(UseAuth);
+
 	if (loading) {
 		return (
 			<div
@@ -19,12 +15,7 @@ function PrivateRoutes({ children }) {
 		);
 	}
 
-	if (role === '1' || role === '2' || role === '3' || role === '4')
-		return children;
-
-	return (
-		<Navigate to={'/sign-in'} state={{ from: location }} replace></Navigate>
-	);
+	return children;
 }
 
 export default PrivateRoutes;

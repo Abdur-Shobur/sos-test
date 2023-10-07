@@ -1,13 +1,10 @@
+/* eslint-disable eqeqeq */
 import React from "react";
-import ReachTextEditor from "../../../components/reacth-text-editor/ReachTextEditor";
-import InputEdit from "../../../components/formComponent/InputEdit";
-import InputSelect from "./own-components/InputSelect";
-import InputSelectRevision from "./own-components/InputSelectRevision";
-import ReactQuill from "react-quill";
+ import InputEdit from "../../../components/formComponent/InputEdit";
+ import ReactQuill from "react-quill";
 
 const ServiceUpdate2 = ({ state, dispatch }) => {
-  console.log(state.data.packages);
-  return (
+   return (
     <>
       <div className="modal-header px-4">
         <h5 className="modal-title" id="exampleModalCenterTitle">

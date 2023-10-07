@@ -13,7 +13,6 @@ function Service2({
 	setClick,
 	handleSubmitCompanions,
 }) {
-	console.log(state);
 	return (
 		<>
 			<div className="modal-header px-4">

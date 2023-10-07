@@ -21,7 +21,6 @@ const GeneralContentUpdate = () => {
 	const { homeData, refetch, isLoading } = GetAdminHomeSettingData();
 	const [state, dispatch] = useReducer(reducer, initialState);
 	const values = removeNullAndDelete_urlObj(state);
-	console.log(values);
 	const handleSubmitData = async (e) => {
 		e.preventDefault();
 		setLoading(true);
@@ -32,7 +31,6 @@ const GeneralContentUpdate = () => {
 				{ ...values, _method: 'POST' },
 				multipartConfig
 			);
-			console.log(data);
 
 			if (data.status === 400) {
 				tost(data?.data?.errors.name[0]);
@@ -47,8 +45,6 @@ const GeneralContentUpdate = () => {
 			setLoading(false);
 
 			tost('try later, something is wrong');
-
-			console.error(error);
 		}
 	};
 

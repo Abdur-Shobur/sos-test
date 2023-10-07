@@ -1,5 +1,5 @@
 import React from 'react';
-import { photoView, time, timeConvert } from '../../action/actions';
+import { photoView, timeConvert } from '../../action/actions';
 import { IMG_PATH } from '../../env';
 
 function SupportDec({ data }) {

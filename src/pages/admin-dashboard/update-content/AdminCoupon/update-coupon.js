@@ -32,7 +32,6 @@ export const reducer = (state = initialState, action) => {
 			};
 		case 'INPUT_NUMBER':
 			const stringToNumber = action?.payload?.value;
-			console.log(isNaN(stringToNumber));
 			return {
 				...state,
 				data: {
@@ -86,7 +85,6 @@ export const reducer = (state = initialState, action) => {
 
 			// Extract year, month, day, hour, minute, and second components
 			const year2 = inputDate.getUTCFullYear();
-			console.log(inputDate.getUTCHours());
 			const month2 = String(inputDate.getUTCMonth() + 1).padStart(2, '0'); // Month is 0-based, so add 1 and pad with leading zeros
 			const day2 = String(inputDate.getUTCDate() + 1).padStart(2, '0');
 			const hour2 = String(inputDate.getUTCHours()).padStart(2, '0');

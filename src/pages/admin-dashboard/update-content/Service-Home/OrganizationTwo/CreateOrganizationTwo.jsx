@@ -56,7 +56,6 @@ const CreateOrganizationTwo = () => {
 
 		try {
 			const data = await http.post(`/admin/organizationTwo`, getData);
-			console.log('two', data);
 			if (data.data.status === 400) {
 				tost(data?.data?.errors.description[0]);
 			} else if (data.data.status === 200) {
@@ -68,7 +67,6 @@ const CreateOrganizationTwo = () => {
 			setLoading(false);
 		} catch (error) {
 			setLoading(false);
-			console.error(error);
 		}
 	};
 

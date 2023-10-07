@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { vendorMenu } from './vendorMenu';
 import { handleSubMenubar, handlerMenubar } from '../action/actions';
+import { LIVE_LINK } from '../env';
 
 function VendorSidebar({ setSidebar }) {
 	const [menuID, setMenuID] = useState(false);
@@ -10,7 +11,7 @@ function VendorSidebar({ setSidebar }) {
 		<div className="ec-left-sidebar ec-bg-sidebar">
 			<div id="sidebar" className="sidebar ec-sidebar-footer">
 				<div className="ec-brand ml-1 position-relative">
-					<Link to={'/vendors-dashboard'}>
+					<Link to={LIVE_LINK} replace>
 						<svg
 							width="70"
 							height="40"

@@ -1,5 +1,5 @@
 import React from 'react';
-// import { IconPickerItem } from 'react-fa-icon-picker';
+// import { IconPickerItem } from "react-fa-icon-picker";
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { Helmet } from 'react-helmet';
@@ -97,12 +97,12 @@ function UpdateCompanions() {
 														<tr key={data?.id}>
 															<td>{i + 1}</td>
 															<td>
-																{/* {/* <IconPickerItem
-																	icon={data?.icon}
-																	size={24}
-																	color="#000"
-																/> */}{' '}
-																*/}
+																{/* react-fa-icon-picker */}
+																{/* <IconPickerItem
+                                  icon={data?.icon}
+                                  size={24}
+                                  color="#000"
+                                /> */}
 															</td>
 															<td>{data.title}</td>
 															<td>

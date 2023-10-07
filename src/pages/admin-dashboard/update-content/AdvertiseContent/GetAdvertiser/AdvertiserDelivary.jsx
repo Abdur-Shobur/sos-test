@@ -77,8 +77,7 @@ const AdvertiserDelivary = () => {
         getData,
         multipartConfig
       );
-      console.log("output", data);
-      if (data?.data?.data !== "success") {
+       if (data?.data?.data !== "success") {
         toast(data?.data?.data.advertise_id[0]);
       } else if (data?.data?.data === "success") {
         navigate("/admin/advertise-content");
@@ -86,8 +85,7 @@ const AdvertiserDelivary = () => {
       }
     } catch (error) {
       setLoading(false);
-      console.error(error);
-    }
+     }
     setLoading(false);
   };
 

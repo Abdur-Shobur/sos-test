@@ -1,6 +1,4 @@
 import React from 'react';
-import { useQuery } from 'react-query';
-import { http } from '../../../components/action/axiosInstance';
 import { useEffect } from 'react';
 import Pagination from '../../../components/breadcrumbs/Pagination';
 import { useState } from 'react';

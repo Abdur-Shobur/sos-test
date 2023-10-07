@@ -18,7 +18,6 @@ function SingleVewAdvertiser() {
 	useEffect(() => {
 		Aos.init({ delay: 300, offset: 50, duration: 300 });
 	}, []);
-	console.log(advertiserData);
 
 	let removeKey = [
 		'advertise_placement',

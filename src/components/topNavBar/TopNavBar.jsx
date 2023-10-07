@@ -1,5 +1,6 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import user_pic from '../../assets/img/user/user.png';
 import { UseAuth } from '../../auth/AuthContext';
 // import { USE_USER } from '../../context/UserContext';
@@ -22,7 +23,7 @@ function TopNavBar({ setSidebar, from, user, res }) {
 		path = userProfile;
 	}
 
-	const { logout, logoutLoading, loading } = useContext(UseAuth);
+	const { logout, logoutLoading } = useContext(UseAuth);
 	if (res?.message === 'Account is not active') {
 		logout();
 	}

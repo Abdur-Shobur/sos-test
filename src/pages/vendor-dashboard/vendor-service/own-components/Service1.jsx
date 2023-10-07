@@ -24,7 +24,6 @@ function Service1({
 	isLoading,
 	categoryAndSubData,
 }) {
-	console.log(state.required);
 	const [loadingSave, setLoadingSave] = useState(false);
 
 	const handleSubmitCompanions = async (e) => {
@@ -36,7 +35,6 @@ function Service1({
 				state.data,
 				multipartConfig
 			);
-			console.log(data, 'data');
 			if (data.data.message === 'Validation errors') {
 				const vError = data?.data?.data;
 				let getErrors = {
@@ -69,7 +67,6 @@ function Service1({
 			setLoadingSave(false);
 		} catch (error) {
 			setLoadingSave(false);
-			console.error(error);
 		}
 	};
 

@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { http } from '../../../../components/action/axiosInstance';
 import { DeletePopUP } from '../../../../components/action/DeletePopUP';
-import style from '../../../../assets/css/style.module.css';
 import tost from '../../../../components/action/tost';
 import { countWord, time } from '../../../../components/action/actions';
 import {

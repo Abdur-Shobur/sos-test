@@ -28,7 +28,6 @@ function ActiveDetails() {
 			payload: product?.variants ? product?.variants : [],
 		});
 	}, [product]);
-	console.log(product);
 	const add_to_cart_handler = () => {
 		setBtnLoad(true);
 		http

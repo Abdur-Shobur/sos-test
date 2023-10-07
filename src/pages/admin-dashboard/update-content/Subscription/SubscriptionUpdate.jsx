@@ -1,8 +1,6 @@
 import React, { useEffect, useReducer, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-// import { IconPicker } from 'react-fa-icon-picker';
-import ProductSpecificationAdd from '../../../vendor-dashboard/products/ProductSpecificationAdd';
-import { http } from '../../../../components/action/axiosInstance';
+ import { http } from '../../../../components/action/axiosInstance';
 import tost from '../../../../components/action/tost';
 import { ClockLoader } from 'react-spinners';
 import EditLoader from '../../../../components/loader/EditLoader';
@@ -19,22 +17,19 @@ import {
 import InputField from './own-components/InputField';
 
 const SubscriptionUpdate = () => {
-	const [modalData, setModalData] = useState({});
-	const [loading, setLoading] = useState(false);
+ 	const [loading, setLoading] = useState(false);
 	const [loadingData, setLoadingData] = useState(false);
 	const { id } = useParams();
 	const ID = id.split('-')[0];
 	const from = id.split('-')[1];
 	const [state, dispatch] = useReducer(reducer, initialState);
 	const [stateF, dispatchF] = useReducer(updateFacilityReducer, updateFacility);
-	console.log(stateF);
 	const navigate = useNavigate();
 	useEffect(() => {
 		const getDataEditData = async () => {
 			setLoadingData(true);
 			const res = await http.get(`/admin/subscription/${ID}`);
-			setModalData(res?.data?.data);
-			dispatch({ type: 'API_DATA', payload: res?.data?.data });
+ 			dispatch({ type: 'API_DATA', payload: res?.data?.data });
 			dispatchF({ type: 'API_DATA', payload: res?.data?.data });
 			setLoadingData(false);
 		};

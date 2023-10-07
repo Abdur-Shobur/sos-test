@@ -17,14 +17,11 @@ const GetVendorOwnService = () => {
   const [page, setPage] = useState(null);
   const { serviceAllData, isLoading, refetch } = GetAffiAllService(page);
 
-  console.log("order", serviceAllData);
-
+ 
   // order progress
   const handleProgress = async (e) => {
-    console.log(e);
-    const data = await http.post("/service/status", e);
-    console.log("data", data);
-    if (data?.data?.data === "success") {
+     const data = await http.post("/service/status", e);
+     if (data?.data?.data === "success") {
       tost(data?.data?.message);
       refetch();
     } else if (data?.data?.message === "Validation errors") {

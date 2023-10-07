@@ -77,7 +77,6 @@ export const reducer = (state = initialState, action) => {
 		case 'MULTI_FILE':
 			let imgFile = [];
 			let imgUrl = [];
-			console.log(action.payload.value);
 			for (let i = 0; i < action.payload.value.length; i++) {
 				imgFile.push(action.payload.value[i]);
 				imgUrl.push(URL.createObjectURL(action.payload.value[i]));

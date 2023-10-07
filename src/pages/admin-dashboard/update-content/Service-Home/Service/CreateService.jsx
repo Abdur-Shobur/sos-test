@@ -50,11 +50,9 @@ const CreateService = () => {
 	const handleSubmitService = async (e) => {
 		e.preventDefault();
 		setLoading(true);
-		console.log(state);
 		const getData = { ...state.data };
 		try {
 			const data = await http.post(`/admin/service`, getData);
-			console.log('service', data);
 			if (data.data.status === 400) {
 				if (data.data.errors.title) {
 					tost(data?.data?.errors.title[0]);
@@ -70,7 +68,6 @@ const CreateService = () => {
 			setLoading(false);
 		} catch (error) {
 			setLoading(false);
-			console.error(error);
 		}
 	};
 
@@ -119,7 +116,7 @@ const CreateService = () => {
 
 							<div className="col-lg-12 mb-3">
 								<label htmlFor="">Icon</label>
-								{/* {/* <IconPicker
+								{/* <IconPicker
 									value={state.data.icon}
 									onChange={(e) =>
 										dispatch({
@@ -130,8 +127,7 @@ const CreateService = () => {
 											},
 										})
 									}
-								/> */}{' '}
-								*/}
+								/> */}
 							</div>
 
 							<div className="col-lg-12">

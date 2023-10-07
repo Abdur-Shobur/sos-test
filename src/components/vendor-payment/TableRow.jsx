@@ -1,5 +1,4 @@
 import React from 'react';
-import style from '../../assets/css/style.module.css';
 import {
 	alert,
 	countWord,

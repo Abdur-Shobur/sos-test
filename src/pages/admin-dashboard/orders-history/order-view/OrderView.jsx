@@ -14,7 +14,6 @@ import BackNavigation from '../../../../components/action/BackNavigation';
 function OrderView({ isLoading, product, mainData, refetch }) {
 	const [loading, setLoad] = useState(false);
 	const statusHandler = (id, status) => {
-		console.log(id, status);
 		if (status === 'cancel') {
 			return RejectedReasons(id, refetch);
 		} else {
@@ -38,7 +37,6 @@ function OrderView({ isLoading, product, mainData, refetch }) {
 				return '#8a909d';
 		}
 	};
-	console.log(styleColor());
 	return (
 		<div className="row">
 			<Helmet>

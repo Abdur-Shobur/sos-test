@@ -5,11 +5,7 @@ import { http } from '../../../../components/action/axiosInstance';
 import { DeletePopUP } from '../../../../components/action/DeletePopUP';
 import { useState } from 'react';
 import tost from '../../../../components/action/tost';
-import {
-	CopyClipboardHandler,
-	countWord,
-	time,
-} from '../../../../components/action/actions';
+import { countWord } from '../../../../components/action/actions';
 import {
 	ClickToCopy,
 	TableImage,
@@ -19,14 +15,11 @@ import {
 	TableTime,
 } from '../../../../components/table/TableComponents';
 import { ADMIN_VENDOR_PROFILE_VIEW } from '../../../../components/action/path';
-import { MdContentCopy } from 'react-icons/md';
-import { RiCheckboxMultipleFill } from 'react-icons/ri';
 
 function TRow({ i, data, page, refetch }) {
-	const { click_button_handler, copied } = CopyClipboardHandler();
 	const [load, setLoad] = useState(false);
 	const location = useLocation();
-	const { image, name, email, status, number, created_at, balance } = data;
+	const { balance } = data;
 
 	// status_handler
 	const status_handler = async (id, status) => {
