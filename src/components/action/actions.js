@@ -271,6 +271,12 @@ export function removeCookie(name, domain) {
 	document.cookie = name + '=;' + expires + ';path=/;domain=' + domain;
 }
 
+export function deleteCookie() {
+	// Set the expiration date to a past date
+	document.cookie =
+		'user_info=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+}
+
 // export function removeCookie(name, domain) {
 // 	const pastDate = new Date(0);
 // 	const expires = 'expires=' + pastDate.toUTCString();

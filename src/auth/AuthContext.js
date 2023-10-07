@@ -2,6 +2,7 @@ import React, { createContext, useEffect, useState } from 'react';
 import swal from 'sweetalert';
 import { http } from '../components/action/axiosInstance';
 import {
+	deleteCookie,
 	getCookie,
 	removeCookie,
 	removeCookie2,
@@ -22,7 +23,7 @@ function AuthContext({ children }) {
 		http.post(`/logout`).then((res) => {
 			if (res.data.status === 200) {
 				localStorage.clear();
-				removeCookie2();
+				deleteCookie();
 				removeCookie('userInfo', DOMAIN_URL);
 				swal('Success', res.data.message, 'success');
 				setLoading(false);
