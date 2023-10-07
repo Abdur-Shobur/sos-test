@@ -12,13 +12,14 @@ function AuthContext({ children }) {
 	const [loading, setLoading] = useState(true);
 	const [logoutLoading, setLogOutLoading] = useState(false);
 
-	const logout = () => {
+	const logout = async () => {
 		setLogOutLoading(true);
+
 		http.post(`/logout`).then((res) => {
 			if (res.data.status === 200) {
 				localStorage.clear();
-				removeCookie('userInfo', DOMAIN_URL);
 				removeCookie('user_info', DOMAIN_URL);
+				removeCookie('userInfo', DOMAIN_URL);
 				swal('Success', res.data.message, 'success');
 				setLoading(false);
 				setLogOutLoading(false);

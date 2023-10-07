@@ -22,7 +22,7 @@ const CheckPermission = ({ roleID, children }) => {
 		}
 	}
 
-	if (TEST !== 'ok') {
+	if (TEST === 'ok') {
 		return children;
 	}
 	// (window.location.href = `${LIVE_LINK}/login`);
