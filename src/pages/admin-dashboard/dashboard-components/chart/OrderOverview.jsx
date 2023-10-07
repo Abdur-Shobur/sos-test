@@ -1,0 +1,141 @@
+import React from 'react';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { Doughnut } from 'react-chartjs-2';
+import PieLoader from '../../../../components/loader/PieLoader';
+
+ChartJS.register(ArcElement, Tooltip, Legend);
+
+export function OrderOverview({ dashboard, isLoading }) {
+	const data = {
+		labels: [
+			'Affiliate',
+			'Vendor',
+			'Online Affiliate',
+			'Online Vendor',
+			'Cancel Order',
+			'Completed Order',
+			'Pending Order',
+			'Today Order',
+			// 'Today Revenue',
+		],
+
+		datasets: [
+			{
+				label: '# of total',
+				data: [
+					dashboard?.active_afi,
+					dashboard?.active_vendor,
+					dashboard?.affi_activity,
+					dashboard?.vendor_activity,
+					dashboard?.monthly_cancelled_order,
+					dashboard?.monthly_completed_order,
+					dashboard?.monthly_pending_order,
+					dashboard?.today_order,
+					// dashboard?.today_revenue,
+				],
+				backgroundColor: [
+					'rgba(255, 99, 132, 0.2)',
+					'rgba(54, 162, 235, 0.2)',
+					'rgba(255, 206, 86, 0.2)',
+					'rgba(75, 192, 192, 0.2)',
+					'rgba(153, 102, 255, 0.2)',
+					'rgba(300, 200, 200, 0.2)',
+					'rgba(155, 159, 64, 0.2)',
+					'rgba(200, 53, 201, 0.2)',
+				],
+				borderColor: [
+					'rgba(255, 99, 132, 1)',
+					'rgba(54, 162, 235, 1)',
+					'rgba(255, 206, 86, 1)',
+					'rgba(75, 192, 192, 1)',
+					'rgba(153, 102, 255, 1)',
+					'rgba(300, 200, 200, 1)',
+					'rgba(155, 159, 64, 1)',
+					'rgba(200, 53, 201, 1)',
+				],
+				borderWidth: 1,
+			},
+		],
+	};
+	return (
+		<div className="card card-default">
+			<div className="card-header justify-content-center">
+				<h2>Orders Overview</h2>
+			</div>
+			<div className="card-body">
+				{isLoading ? <PieLoader /> : <Doughnut data={data} />}
+			</div>
+
+			<div className="card-footer d-flex flex-wrap bg-white p-0">
+				<div className="col-6">
+					<div className="p-20">
+						<ul className="d-flex flex-column justify-content-between">
+							<li className="mb-2">
+								<i
+									className="mdi mdi-checkbox-blank-circle-outline mr-2"
+									style={{ color: 'rgba(255, 99, 132, 1)' }}
+								></i>
+								Active Affiliate
+							</li>
+							<li className="mb-2">
+								<i
+									className="mdi mdi-checkbox-blank-circle-outline mr-2"
+									style={{ color: 'rgba(54, 162, 235, 1)' }}
+								></i>
+								Active Vendor
+							</li>
+							<li>
+								<i
+									className="mdi mdi-checkbox-blank-circle-outline mr-2"
+									style={{ color: 'rgba(255, 206, 86, 1)' }}
+								></i>
+								Online Affiliate
+							</li>
+							<li>
+								<i
+									className="mdi mdi-checkbox-blank-circle-outline mr-2"
+									style={{ color: 'rgba(75, 192, 192, 1)' }}
+								></i>
+								Online Vendor
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div className="col-6 border-left">
+					<div className="p-20">
+						<ul className="d-flex flex-column justify-content-between">
+							<li className="mb-2">
+								<i
+									className="mdi mdi-checkbox-blank-circle-outline mr-2"
+									style={{ color: 'rgba(153, 102, 255, 1)' }}
+								></i>
+								Cancel Order
+							</li>
+							<li className="mb-2">
+								<i
+									className="mdi mdi-checkbox-blank-circle-outline mr-2"
+									style={{ color: 'rgba(300, 200, 200, 1)' }}
+								></i>
+								Completed Order
+							</li>
+							<li>
+								<i
+									className="mdi mdi-checkbox-blank-circle-outline mr-2"
+									style={{ color: 'rgba(155, 159, 64, 1)' }}
+								></i>
+								Pending Order
+							</li>
+							<li>
+								<i
+									className="mdi mdi-checkbox-blank-circle-outline mr-2"
+									style={{ color: 'rgba(200, 53, 201, 1)' }}
+								></i>
+								Today Order
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+}

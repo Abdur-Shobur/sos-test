@@ -1,0 +1,9 @@
+.remove_qty .qty_remove_hide {
+	display: none;
+	position: relative;
+}
+.remove_qty:hover .qty_remove_hide {
+	display: block;
+	color: rgb(206, 50, 2);
+	position: absolute;
+}

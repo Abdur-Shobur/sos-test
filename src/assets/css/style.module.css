@@ -1,0 +1,11 @@
+.time span {
+	position: relative;
+	display: block;
+}
+span.showTime {
+	/* position: absolute; */
+	display: block;
+	left: 0;
+	top: 10px;
+	width: 85px;
+}

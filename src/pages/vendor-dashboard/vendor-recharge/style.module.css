@@ -1,0 +1,77 @@
+.chooseWallerBox {
+    padding: 30px;
+    border-radius: 10px;
+    background: rgba(29, 29, 29, 0.05);
+    width: 100%;
+  }
+  .chooseWalletHeading {
+    color: #1d1d1d;
+    text-align: left;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 30px;
+    line-height: normal;
+  }
+  .payOptions {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  .checkField {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    background: #fffbfb;
+    border-radius: 5px;
+    align-self: stretch;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+  .checkField.active {
+    background: #fff;
+    border: 1px solid #1a77f2;
+  }
+  .checkBorder {
+    max-width: 20px;
+    min-width: 20px;
+    height: 20px;
+    background-color: transparent;
+    display: inline-block;
+    border-radius: 50%;
+    border: 2px solid #1a77f2;
+    position: relative;
+  }
+  .dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgb(160, 158, 158);
+    display: inline-block;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .dot.active {
+    background-color: #1a77f2;
+  }
+  @media screen and (max-width: 550px) {
+    .chooseWallerBox {
+      padding: 15px;
+    }
+    .chooseWalletHeading {
+      margin-bottom: 10px;
+    }
+    .payOptions {
+      flex-direction: column;
+      gap: 5px;
+    }
+    .checkField {
+      width: 200px;
+    }
+  }
+  

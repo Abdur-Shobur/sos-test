@@ -1,0 +1,241 @@
+.border-none-custom-css input {
+	border: transparent !important;
+	height: 33px !important;
+}
+.extra_css_for_design .css-13cymwt-control {
+	border-radius: 15px !important;
+	border: 1px solid #eeeeee !important;
+}
+.css-t3ipsp-control {
+	border-radius: 15px !important;
+	border: 1px solid #eeeeee !important;
+	box-shadow: none !important;
+}
+.css-t3ipsp-control:hover {
+	border-color: 1px solid #eeeeee !important;
+}
+
+.add_rounded_style .searchWrapper {
+	border-color: #cccccc7d !important;
+	border-radius: 16px !important;
+}
+
+.brand-delete.edit_icon_style {
+	font-size: 23px;
+}
+
+.error {
+	color: rgb(125, 2, 2) !important;
+}
+
+.flex-j-between-i-center {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.time span {
+	/* position: relative; */
+	display: block;
+}
+span.showTime {
+	/* position: absolute; */
+	display: block;
+	left: 0;
+	top: 10px;
+	width: 85px;
+}
+
+/* modal css  */
+.primaryBtn {
+	margin: 20px 10px;
+	cursor: pointer;
+	font-weight: 500;
+	padding: 13px 25px;
+	border-radius: 15px;
+	font-size: 0.8rem;
+	border: none;
+	color: white;
+	background: #00b46f;
+	transition: all 0.25s ease;
+}
+.primaryBtn:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 20px -10px #00b46fc4;
+}
+.btnSecondary {
+	margin: 20px 10px;
+	cursor: pointer;
+	font-weight: 500;
+	padding: 13px 25px;
+	border-radius: 15px;
+	font-size: 0.8rem;
+	border: none;
+	color: white;
+	background: #888888;
+	transition: all 0.25s ease;
+	cursor: not-allowed;
+}
+
+.btnSecondary:hover {
+	transform: translateX(-5px);
+	box-shadow: 0 10px 20px -10px rgba(163, 163, 163, 0.397);
+}
+
+.ql-toolbar.ql-snow {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border: 1px solid #eeeeee !important;
+}
+
+.ql-container.ql-snow {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border: 1px solid #eeeeee !important;
+	height: 100px;
+}
+.showSidebarMenuButton {
+	display: none;
+	position: absolute;
+	z-index: 99999;
+	right: 0;
+	top: 20px;
+	width: 65px;
+	height: 30px;
+}
+.sidebarOverlayMenu {
+	display: none;
+	top: 0;
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	background: #91909033;
+	z-index: 16;
+}
+.ec-navigation {
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+table {
+	white-space: nowrap;
+}
+/* sidebar  */
+@media (max-width: 768px) {
+	.sidebar-minified .ec-left-sidebar {
+		z-index: 17;
+	}
+	.showSidebarMenuButton {
+		display: inline-block;
+	}
+	.sidebarOverlayMenu {
+		display: block;
+	}
+}
+.sidebarNav path {
+	fill: #aeaeae;
+}
+.sidebar-active path {
+	fill: #fff;
+}
+
+.wrap_single_card_view {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+
+	gap: 20px;
+}
+
+@media (max-width: 1400px) {
+	.wrap_single_card_view {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+}
+@media (max-width: 1100px) {
+	.wrap_single_card_view {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+}
+@media (max-width: 1000px) {
+	.wrap_single_card_view {
+		grid-template-columns: repeat(1, 1fr);
+		gap: 20px;
+	}
+}
+
+.advertiser_store_image_preview {
+	display: flex;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+.advertiser_store_image_preview .pre_imag-view {
+}
+.advertiser_store_image_preview .custom-file {
+	max-width: 200px;
+}
+
+.pre_imag-view {
+	display: flex;
+	gap: 20px;
+	/* align-items: center; */
+	flex-wrap: wrap;
+}
+
+.pre_imag-view img {
+	width: 100px;
+	height: 100px;
+	/* padding: 10px; */
+	border-radius: 10px;
+	object-fit: cover;
+}
+
+.date_pick_to_form .react-date-picker__wrapper,
+.date_pick_to_form .react-date-picker__inputGroup__input {
+	border: none;
+}
+.date_pick_to_form .form-control {
+	border: 1px solid #eeeeee;
+}
+
+.county-select-custom-design .stdropdown-container {
+	border: none;
+}
+.county-select-custom-design .stdropdown-tools {
+	/* display: none; */
+	position: absolute;
+	right: 20px;
+}
+.county-select-custom-design .stsearch-box input {
+	width: 100%;
+	height: 45px;
+	margin: 0;
+	padding: 0 15px;
+	border-radius: 0;
+	border: 1px solid #eeeeee;
+	background-color: transparent;
+	color: #777;
+	box-shadow: none;
+	outline: none;
+	border-radius: 15px;
+}
+
+.extra_css_for_design.error .css-13cymwt-control {
+	border: 1px solid #ffa7a7 !important;
+}
+
+.responsive-multiple-cards-boxes-dfs {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+@media (max-width: 1500px) {
+	.responsive-multiple-cards-boxes-dfs {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+@media (max-width: 1150px) {
+	.responsive-multiple-cards-boxes-dfs {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+}
