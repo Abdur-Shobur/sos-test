@@ -271,11 +271,35 @@ export function removeCookie(name, domain) {
 	document.cookie = name + '=;' + expires + ';path=/;domain=' + domain;
 }
 
-export function deleteCookie() {
-	// Set the expiration date to a past date
-	document.cookie =
-		'user_info=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+export function deleteCookie(cookieName) {
+	// Split all cookies into an array
+	const cookies = document.cookie.split(';');
+	console.log(cookieName);
+	// Loop through all cookies
+	for (let i = 0; i < cookies.length; i++) {
+		const cookie = cookies[i].trim();
+
+		// Check if this cookie is the one to delete
+		if (cookie.startsWith(cookieName + '=')) {
+			// Get the cookie name and value
+			const cookieParts = cookie.split('=');
+			const name = cookieParts[0];
+
+			// Set the expiration date to a past date
+			document.cookie =
+				name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+			return; // Exit the loop once the cookie is deleted
+		}
+	}
 }
+
+// Example usage to remove the "user_info" cookie
+
+// export function deleteCookie() {
+// 	// Set the expiration date to a past date
+// 	document.cookie =
+// 		'user_info=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+// }
 
 // export function removeCookie(name, domain) {
 // 	const pastDate = new Date(0);

@@ -23,7 +23,7 @@ function AuthContext({ children }) {
 		http.post(`/logout`).then((res) => {
 			if (res.data.status === 200) {
 				localStorage.clear();
-				deleteCookie();
+				deleteCookie('user_info');
 				removeCookie('userInfo', DOMAIN_URL);
 				swal('Success', res.data.message, 'success');
 				setLoading(false);
